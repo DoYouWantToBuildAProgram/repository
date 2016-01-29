@@ -30,19 +30,14 @@ public class Person4 {
      * @return the modified string
      */
     private String calc(String input) {
-      String answer = null;
-      char[] word = input.toCharArray();
-      for (int x = 0; x < input.length(); x++) {
-        word[x] = (char) ((int)word[x] + 1);
-        System.out.println(word[x]);
-      }
-      return null;
+        String answer = "";
+        char[] word = input.toCharArray();
+        for (int x = 0; x < input.length(); x++) {
+            word[x] = (char) ((int)word[x] + 1);
+            answer = answer + word[x];
+        }
+        return answer;
     }
-    public static void main(String[] args) {
-        Person4 bob = new Person4("Bobby");
-        bob.calc("Bobby");
-    }
-    
     /**
      * Return a string rep of this object
      * that varies with an input string
