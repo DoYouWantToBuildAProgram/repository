@@ -30,8 +30,17 @@ public class Person4 {
      * @return the modified string
      */
     private String calc(String input) {
-      //Person 4 put your implementation here
+      String answer = null;
+      char[] word = input.toCharArray();
+      for (int x = 0; x < input.length(); x++) {
+        word[x] = (char) ((int)word[x] + 1);
+        System.out.println(word[x]);
+      }
       return null;
+    }
+    public static void main(String[] args) {
+        Person4 bob = new Person4("Bobby");
+        bob.calc("Bobby");
     }
     
     /**
