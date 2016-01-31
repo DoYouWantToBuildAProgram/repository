@@ -1,15 +1,14 @@
 apply plugin: "java"
-dependencies {
-    compile files ('src/lib/resources.jar')
-}
 
 sourceSets {
-	main.java.srcDir "src/main"
+    main.java.srcDir "src/main"
+    main.java.srcDir "src/test"
 }
 
-
-
+dependencies {
+    compile files('lib/resources.jar')
+}
 
 jar {
-    manifest.attributes "Main-Class": "edu/gatech/oad/antlab/pkg1/AntLabMain"
+    manifest.attributes("Main-Class": "edu/gatech/oad/antlab/pkg1/AntLabMain", 'Class-Path': '../../lib/resources.jar')
 }
