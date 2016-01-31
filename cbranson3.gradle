@@ -1,0 +1,20 @@
+defaultTasks  'task1'
+
+apply plugin: "java"
+
+task task1 << {
+    println 'This is the default task.'
+}
+
+sourceSets {
+    main.java.srcDir "src/main"
+    main.java.srcDir "src/test"
+}
+
+dependencies {
+    compile files('lib/resources.jar')
+}
+
+jar {
+    manifest.attributes "Main-Class": "edu/gatech/oad/antlab/pkg1/AntLabMain"
+}
