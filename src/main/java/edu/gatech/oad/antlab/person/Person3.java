@@ -9,7 +9,7 @@ package edu.gatech.oad.antlab.person;
  */
 public class Person3 {
    /** Holds the persons real name */  
-	private String name;
+	private String name = "Niklas";
 	
 	/**
 	 * The constructor, takes in the persons
@@ -42,6 +42,7 @@ public class Person3 {
 	 * @return the reversed string
 	 */
 	private String calc(String input) {
-	  return input.substring(-1,0);
+	    StringBuilder builder = new StringBuilder(input);
+		return builder.reverse().toString();
 	}
 }
