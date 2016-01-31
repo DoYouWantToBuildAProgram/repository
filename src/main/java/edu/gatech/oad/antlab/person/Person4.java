@@ -29,15 +29,16 @@ public class Person4 {
      * @param input the string to be modified
      * @return the modified string
      */
-    private String calc(String input) {
-      String answer = null;
+    public String calc(String input) {
+      String answer = "";
       char[] word = input.toCharArray();
       for (int x = 0; x < input.length(); x++) {
         word[x] = (char) ((int)word[x] + 1);
-        System.out.println(word[x]);
+        answer = answer + word[x];
       }
-      return null;
+      return answer;
     }
+  
     public static void main(String[] args) {
         Person4 bob = new Person4("Bobby");
         bob.calc("Bobby");
