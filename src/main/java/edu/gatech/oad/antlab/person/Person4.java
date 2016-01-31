@@ -38,11 +38,6 @@ public class Person4 {
       }
       return answer;
     }
-  
-    public static void main(String[] args) {
-        Person4 bob = new Person4("Bobby");
-        bob.calc("Bobby");
-    }
     
     /**
      * Return a string rep of this object
