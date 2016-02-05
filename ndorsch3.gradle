@@ -1,3 +1,5 @@
+defaultTasks  'task1'
+
 apply plugin: "java"
 
 
