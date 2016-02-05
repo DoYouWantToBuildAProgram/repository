@@ -2,7 +2,9 @@ defaultTasks  'task1'
 
 apply plugin: "java"
 
-
+task task1 << {
+    println 'This is the default task.'
+}
 sourceSets {
 	main.java.srcDir "src/main"
 	main.java.srcDir "src/test"
